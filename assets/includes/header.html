@@ -28,6 +28,55 @@
             <li class="nav-item">
                 <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#contact-modal">Boletín Mensual</a>
+            </li>
         </ul>
     </div>
 </nav>
+
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contact-modal-label">Inscripción al Boletín Mensual</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name-in">Nombre*</label>
+              <input type="text" class="form-control" id="name-in" placeholder="Ingresa tu nombre" required>
+              <div class="valid-feedback">
+                Bien!
+              </div>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email-in">Email*</label>
+              <input type="email" class="form-control" id="email-in" aria-describedby="email-help" placeholder="email@example.com">
+              <small id="email-help" class="form-text text-muted">
+                No compartiremos tus datos.
+              </small>
+              <div class="invalid-feedback">
+                Verifica el formato del email
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="comment-in">Comentarios*</label>
+              <textarea class="form-control" id="comment-in" rows="4" required></textarea>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="receive-info">
+              <label class="form-check-label" for="receive-info">Quiero recibir correos informativos</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Suscribir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
